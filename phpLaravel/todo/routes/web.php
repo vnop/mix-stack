@@ -1,7 +1,5 @@
 <?php
 
-use App\Task;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +11,4 @@ use App\Task;
 |
 */
 
-Route::get('/', function () {
-    $tasks = Task::all();
-    return view('welcome', compact('tasks'));
-});
+Route::get('/tasks', 'TasksController@index');
